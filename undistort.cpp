@@ -8,7 +8,7 @@ class Undistort
   public:
       Undistort() = delete;
       //构造函数，参数为：图片宽度，图片高度，相机内参，畸变系数
-      Undistort(const int width,const int height,const cv::Mat &intrinsic_matrix,const cv::Mat distortion)
+      Undistort(const int width,const int height,const cv::Mat &intrinsic_matrix,const cv::Mat &distortion)
       {
         if(width <= 0 || height <= 0)
         {
