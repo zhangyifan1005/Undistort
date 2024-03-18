@@ -47,8 +47,8 @@ class Undistort
           throw std::invalid_argument("Undistort GetUndistortPoint's argument width and height error");
         }
 
-        int undistort_x = std::floor(m_undistort_points.at<float>(x * m_height +y,0));
-        int undistort_y = std::floor(m_undistort_points.at<float>(x * m_height +y,1));
+        int undistort_x = std::round(m_undistort_points.at<float>(x * m_height + y,0));
+        int undistort_y = std::round(m_undistort_points.at<float>(x * m_height + y,1));
 
         return std::make_pair(undistort_x,undistort_y);
       }
